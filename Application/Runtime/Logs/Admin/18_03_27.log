@@ -1,0 +1,118 @@
+[ 2018-03-27T08:24:03+08:00 ] 127.0.0.1 /index.php/Admin/Home/home
+ERR: 无法加载控制器:Home
+
+[ 2018-03-27T08:25:18+08:00 ] 127.0.0.1 /index.php/Admin/home.html
+ERR: 无法加载控制器:Home
+
+[ 2018-03-27T08:25:25+08:00 ] 127.0.0.1 /index.php/Admin/home.html
+ERR: 无法加载控制器:Home
+
+[ 2018-03-27T08:36:23+08:00 ] 127.0.0.1 /index.php/Admin/info-reg.html
+ERR: 无法加载控制器:Info-reg
+
+[ 2018-03-27T08:36:24+08:00 ] 127.0.0.1 /index.php/Admin/info-mgt.html
+ERR: 无法加载控制器:Info-mgt
+
+[ 2018-03-27T08:36:26+08:00 ] 127.0.0.1 /index.php/Admin/info-mgt.html
+ERR: 无法加载控制器:Info-mgt
+
+[ 2018-03-27T08:36:26+08:00 ] 127.0.0.1 /index.php/Admin/info-reg.html
+ERR: 无法加载控制器:Info-reg
+
+[ 2018-03-27T08:36:32+08:00 ] 127.0.0.1 /index.php/Admin/info-mgt.html
+ERR: 无法加载控制器:Info-mgt
+
+[ 2018-03-27T08:36:33+08:00 ] 127.0.0.1 /index.php/Admin/info-reg.html
+ERR: 无法加载控制器:Info-reg
+
+[ 2018-03-27T08:39:51+08:00 ] 127.0.0.1 /index.php/Admin/Dept/showList.html
+ERR: 非法操作:showList
+
+[ 2018-03-27T08:39:55+08:00 ] 127.0.0.1 /index.php/Admin/Dept/add.html
+ERR: 非法操作:add
+
+[ 2018-03-27T08:45:17+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/jquery.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:17+08:00 ] 127.0.0.1 /index.php/Admin/Dept/css/info-mgt.css
+ERR: 非法操作:css
+
+[ 2018-03-27T08:45:17+08:00 ] 127.0.0.1 /index.php/Admin/Dept/css/WdatePicker.css
+ERR: 非法操作:css
+
+[ 2018-03-27T08:45:17+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/common.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:17+08:00 ] 127.0.0.1 /index.php/Admin/Dept/css/base.css
+ERR: 非法操作:css
+
+[ 2018-03-27T08:45:17+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/jquery.pagination.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:18+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/WdatePicker.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:18+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/jquery.pagination.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:19+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/common.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:19+08:00 ] 127.0.0.1 /index.php/Admin/Dept/css/info-reg.css
+ERR: 非法操作:css
+
+[ 2018-03-27T08:45:19+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/WdatePicker.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:19+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/jquery.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:19+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/common.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:19+08:00 ] 127.0.0.1 /index.php/Admin/Dept/css/base.css
+ERR: 非法操作:css
+
+[ 2018-03-27T08:45:19+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/WdatePicker.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/css/WdatePicker.css
+ERR: 非法操作:css
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/css/info-mgt.css
+ERR: 非法操作:css
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/common.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/jquery.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/WdatePicker.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/css/base.css
+ERR: 非法操作:css
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/jquery.pagination.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/common.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/WdatePicker.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:45:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/js/jquery.pagination.js
+ERR: 非法操作:js
+
+[ 2018-03-27T08:58:53+08:00 ] 127.0.0.1 /index.php/Admin/Index/add
+ERR: 非法操作:add
+
+[ 2018-03-27T09:17:52+08:00 ] 127.0.0.1 /index.php/Admin/Index/add
+ERR: 非法操作:add
+
+[ 2018-03-27T14:55:04+08:00 ] 127.0.0.1 /index.php/Admin/User/test1
+ERR: 1146:Table 'db_oa.sp_szphp' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `sp_szphp`
+

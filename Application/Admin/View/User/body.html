@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myDemo</title>
+</head>
+<body>
+<include file="User/header" title=""/>
+<h1>{$str}</h1>
+<volist name="arr2" id="value" key="k">
+    <p>{$value.id}=={$k}列</p>
+</volist>
+<hr/>
+<foreach name="arr2" item="value" key="k">
+    <foreach>
+        <p>{$value.id}=={$k}列</p>
+    </foreach>
+</foreach>
+<if condition="$week==1">
+    <p>今天星期一</p>
+    <elseif condition="$week==2"/>
+    <p>今天星期二</p>
+    <elseif condition="$week==3"/>
+    <p>今天星期3</p>
+    <elseif condition="$week==4"/>
+    <p>今天星期4</p>
+    <elseif condition="$week==5"/>
+    <p>今天星期5</p>
+    <elseif condition="$week==6"/>
+    <p>今天星期6</p>
+    <else/>
+    今天是星期天
+</if>
+
+<include file="User/foot"/>
+</body>
+</html>
+
+
+
+
