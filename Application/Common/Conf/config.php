@@ -11,5 +11,6 @@ return array(
     'DB_PREFIX'             =>  'sp_',    // 数据库表前缀
     /*开启跟踪信息*/
     'SHOW_PAGE_TRACE'       =>  true,
+    'LOAD_EXT_FILE'         =>  'info',
 );
 

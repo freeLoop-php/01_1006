@@ -116,3 +116,9 @@ ERR: 非法操作:add
 ERR: 1146:Table 'db_oa.sp_szphp' doesn't exist
  [ SQL语句 ] : SHOW COLUMNS FROM `sp_szphp`
 
+[ 2018-03-27T20:14:46+08:00 ] 127.0.0.1 /index.php/Admin/Public/index.html
+ERR: 非法操作:index
+
+[ 2018-03-27T22:45:19+08:00 ] 127.0.0.1 /index.php/Admin/Dept/edit/id/1
+ERR: 模板不存在:./Application/Admin/View/Dept/edit.html
+

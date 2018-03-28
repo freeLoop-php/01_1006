@@ -31,7 +31,53 @@ class DeptController extends Controller{
     }
 
     public function showList(){
+        $model=M('Dept');
+        $data=$model->order("sort asc")->select();
+        foreach ($data as $k=>$v){
+            if ($v['pid']>0){
+                $info=$model->find($v['pid']);
+                if ($info){
+                    $data[$k]['dName']=$info['name'];
+                }
+            }else{
+                $data[$k]['dName']="顶级部门";
+            }
+        }
+        load("@/tree");
+        $data=getTree($data);
+        $this->assign("data",$data);
         $this->display();
+    }
+
+    public function edit(){
+        $model=M("Dept");
+        if (I("post.")){
+            $result=$model->save(I("post."));
+            if ($result===false){
+                $this->error("修改失败");
+            }else{
+                $this->success("修改成功",U("showList"),3);
+            }
+        }else{
+            $id=I('get.id');
+            $data=$model->find($id);
+            $ids=$model->where("id!=".$id)->select();
+            $this->assign('data',$data);
+            $this->assign('ids',$ids);
+            $this->display();
+        }
+    }
+
+    public function del(){
+        $model=M("Dept");
+        //dump($_GET);exit();
+        $result=$model->delete(I("get.id"));
+        dump($model->getLastSql());
+        if ($result){
+            $this->redirect("Dept/showList");
+        }else{
+            $this->redirect("Dept/showList");
+        }
     }
 }
 

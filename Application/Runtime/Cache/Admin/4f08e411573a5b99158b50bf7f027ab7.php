@@ -18,6 +18,7 @@
     <a href="javascript:;" class="check">审核</a>
 </div>
 <div class="table-box">
+    <form >
 	<table>
     	<thead>
         	<tr>
@@ -30,56 +31,20 @@
             </tr>
         </thead>
         <tbody>
-        	<tr>
-            	<td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
+        <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><tr>
+                <td class="num"><?php echo ($val["id"]); ?></td>
+                <td class="name"><?php echo (str_repeat('&emsp;',$val["level"]*2)); echo ($val["name"]); ?></td>
+                <td class="process"><?php echo ($val["dName"]); ?></td>
+                <td class="node"><?php echo ($val["sort"]); ?></td>
+                <td class="time"><?php echo ($val["remark"]); ?></td>
+                <td class="operate">
+                    <a href="/index.php/Admin/Dept/edit/id/<?php echo ($val["id"]); ?>">编辑</a>
+                    <input type="checkbox" class="deptid" value="<?php echo ($val["id"]); ?>"/>
+                </td>
+            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>
     </table>
+    </form>
 </div>
 <div class="pagination ue-clear"></div>
 </body>
@@ -109,5 +74,30 @@ $('.pagination').pagination(100,{
 $("tbody").find("tr:odd").css("backgroundColor","#eff6fa");
 
 showRemind('input[type=text], textarea','placeholder');
+$(function () {
+    $(".del").on("click",function () {
+
+
+
+        var id='';
+        var obj=$(":checkbox:checked");
+        for (var i=0;i<obj.length;i++){
+            id += obj[i].value+",";
+        }
+        id=id.substring(0,id.length-1);
+        location.href='/index.php/Admin/Dept/del/id/'+id;
+        /*
+        console.log(id);
+        $.ajax({
+            data:"id/"+id,
+            url:"/index.php/Admin/Dept/del",
+            type:"get",
+            success:function (res) {
+               //window.location.href="";
+            }
+        });*/
+
+    });
+});
 </script>
 </html>

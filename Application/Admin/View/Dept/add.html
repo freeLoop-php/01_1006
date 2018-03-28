@@ -21,7 +21,7 @@
 				<select name="pid">
 					<option value="0">顶级部门</option>
 					<volist name="data" id="v">
-						<option value="1">{$v.name}</option>
+						<option value="{$v.id}">{$v.name}</option>
 					</volist>
 				</select>
 	        </div>
@@ -60,6 +60,7 @@ $(function () {
     })
 	$(".clear").on('click',function () {
 		$('form')[0].reset();
+
     });
 });
 showRemind('input[type=text], textarea','placeholder');

@@ -1,0 +1,171 @@
+[ 2018-03-28T07:58:49+08:00 ] 127.0.0.1 /index.php/Admin/Dept/shanchu
+ERR: 非法操作:shanchu
+
+[ 2018-03-28T07:59:15+08:00 ] 127.0.0.1 /index.php/Admin/Public/edit
+ERR: 非法操作:edit
+
+[ 2018-03-28T07:59:32+08:00 ] 127.0.0.1 /index.php/Admin/Dept/edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `sp_dept` WHERE ( id!= ) 
+
+[ 2018-03-28T08:17:20+08:00 ] 127.0.0.1 /index.php/Admin/Dept/
+ERR: 非法操作:index
+
+[ 2018-03-28T09:12:24+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001300s ]
+
+[ 2018-03-28T09:13:32+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0030s ]
+
+[ 2018-03-28T09:52:00+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0039s ]
+
+[ 2018-03-28T09:52:02+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0026s ]
+
+[ 2018-03-28T09:52:34+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001028s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0035s ]
+
+[ 2018-03-28T09:52:38+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0033s ]
+
+[ 2018-03-28T09:52:40+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0035s ]
+
+[ 2018-03-28T09:52:41+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0052s ]
+
+[ 2018-03-28T09:52:49+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0038s ]
+
+[ 2018-03-28T09:54:25+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001045s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0025s ]
+
+[ 2018-03-28T09:54:30+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0031s ]
+
+[ 2018-03-28T09:54:39+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0039s ]
+
+[ 2018-03-28T09:55:30+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001129s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0030s ]
+
+[ 2018-03-28T09:55:48+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001647s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0141s ]
+
+[ 2018-03-28T09:56:18+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0033s ]
+
+[ 2018-03-28T09:56:35+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0026s ]
+
+[ 2018-03-28T09:56:44+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0052s ]
+
+[ 2018-03-28T09:56:49+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0040s ]
+
+[ 2018-03-28T09:58:30+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0027s ]
+
+[ 2018-03-28T09:59:59+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0036s ]
+
+[ 2018-03-28T10:00:29+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0025s ]
+
+[ 2018-03-28T10:00:36+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0030s ]
+
+[ 2018-03-28T10:00:58+08:00 ] 127.0.0.1 /index.php/Admin/Dept/del?id/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+SQL: SHOW COLUMNS FROM `sp_dept` [ RunTime:0.0025s ]
+
+[ 2018-03-28T14:32:59+08:00 ] 127.0.0.1 /index.php/Admin/User/showList.html
+ERR: 非法操作:showList
+
+[ 2018-03-28T14:33:03+08:00 ] 127.0.0.1 /index.php/Admin/User/add.html
+ERR: 非法操作:add
+
+[ 2018-03-28T17:43:24+08:00 ] 127.0.0.1 /index.php/Admin/User/showList.html
+ERR: 1054:Unknown column 't1.pid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM sp_user t1 left join sp_dept as t2 on t1.pid=t2.id  LIMIT 0,5  
+
+[ 2018-03-28T17:45:05+08:00 ] 127.0.0.1 /index.php/Admin/User/showList.html
+ERR: 1054:Unknown column 't1.pid' in 'on clause'
+ [ SQL语句 ] : SELECT t1.*,t2.name as deptName FROM sp_user t1 left join sp_dept as t2 on t1.pid=t2.id  LIMIT 0,5  
+
+[ 2018-03-28T19:39:30+08:00 ] 127.0.0.1 /index.php/Admin/User/:U('charts')
+ERR: 非法操作::U('charts')
+

@@ -18,6 +18,7 @@
     <a href="javascript:;" class="check">审核</a>
 </div>
 <div class="table-box">
+    <form >
 	<table>
     	<thead>
         	<tr>
@@ -30,56 +31,22 @@
             </tr>
         </thead>
         <tbody>
-        	<tr>
-            	<td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
+        <volist name="data" id="val">
             <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
+                <td class="num">{$val.id}</td>
+                <td class="name">{$val.level|str_repeat='&emsp;',###*2}{$val.name}</td>
+                <td class="process">{$val.dName}</td>
+                <td class="node">{$val.sort}</td>
+                <td class="time">{$val.remark}</td>
+                <td class="operate">
+                    <a href="__CONTROLLER__/edit/id/{$val.id}">编辑</a>
+                    <input type="checkbox" class="deptid" value="{$val.id}"/>
+                </td>
             </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
-            <tr>
-                <td class="num">1</td>
-                <td class="name">总裁办</td>
-                <td class="process">顶级部门</td>
-                <td class="node">1</td>
-                <td class="time">无</td>
-                <td class="operate"><a href="javascript:;">查看</a></td>
-            </tr>
+        </volist>
         </tbody>
     </table>
+    </form>
 </div>
 <div class="pagination ue-clear"></div>
 </body>
@@ -109,5 +76,30 @@ $('.pagination').pagination(100,{
 $("tbody").find("tr:odd").css("backgroundColor","#eff6fa");
 
 showRemind('input[type=text], textarea','placeholder');
+$(function () {
+    $(".del").on("click",function () {
+
+
+
+        var id='';
+        var obj=$(":checkbox:checked");
+        for (var i=0;i<obj.length;i++){
+            id += obj[i].value+",";
+        }
+        id=id.substring(0,id.length-1);
+        location.href='/index.php/Admin/Dept/del/id/'+id;
+        /*
+        console.log(id);
+        $.ajax({
+            data:"id/"+id,
+            url:"/index.php/Admin/Dept/del",
+            type:"get",
+            success:function (res) {
+               //window.location.href="";
+            }
+        });*/
+
+    });
+});
 </script>
 </html>

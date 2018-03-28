@@ -8,26 +8,27 @@
 </head>
 <body>
 	<div id="container">
+        <form action="<?php echo U('checkLogin');?>" method="post">
 		<div id="bd">
 			<div class="login1">
             	<div class="login-top"><h1 class="logo"></h1></div>
                 <div class="login-input">
                 	<p class="user ue-clear">
                     	<label>用户名</label>
-                        <input type="text" />
+                        <input type="text" name="username"/>
                     </p>
                     <p class="password ue-clear">
                     	<label>密&nbsp;&nbsp;&nbsp;码</label>
-                        <input type="text" />
+                        <input type="text" name="password"/>
                     </p>
                     <p class="yzm ue-clear">
                     	<label>验证码</label>
-                        <input type="text" />
-                        <cite>X394D</cite>
+                        <input type="text" name="captcha"/>
+                        <cite><img src="/index.php/Admin/Public/captcha" onclick="this.src='/index.php/Admin/Public/captcha/t/'+Math.random()"/></cite>
                     </p>
                 </div>
                 <div class="login-btn ue-clear">
-                	<a href="index.html" class="btn">登录</a>
+                	<a href="javascript:;" class="btn">登录</a>
                     <div class="remember ue-clear">
                     	<input type="checkbox" id="remember" />
                         <em></em>
@@ -37,6 +38,7 @@
             </div>
 		</div>
 	</div>
+    </form>
     <div id="ft">CopyRight&nbsp;2014&nbsp;&nbsp;版权所有&nbsp;&nbsp;uimaker.com专注于ui设计&nbsp;&nbsp;苏ICP备09003079号</div>
 </body>
 <script type="text/javascript" src="/Public/Admin/js/jquery.js"></script>
@@ -70,5 +72,11 @@ function checkRemember($this){
 		}
 	}
 }
+
+$(function () {
+    $(".btn").on("click",function () {
+        $('form').submit();
+    });
+});
 </script>
 </html>
