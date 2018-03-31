@@ -58,6 +58,7 @@ $(function () {
     })
 	$(".clear").on('click',function () {
 		$('form')[0].reset();
+
     });
 });
 showRemind('input[type=text], textarea','placeholder');

@@ -4,7 +4,7 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Model;
 
-class DeptController extends Controller{
+class DeptController extends CommonController {
     public function add(){
         if (IS_POST){
             $model=D("Dept");

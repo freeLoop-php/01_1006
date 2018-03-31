@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Think;
 
-class TestController extends Controller{
+class TestController extends CommonController {
     function test1(){
         session("name","韩梅梅");
         session("name2","李雷");
@@ -52,6 +52,13 @@ class TestController extends Controller{
         );
         $code=new \Think\Verify($config);
         $code->entry();
+    }
+    function test8(){
+        echo get_client_ip(1);
+    }
+    function test9(){
+        $ipLo=new \Org\Net\IpLocation("qqwry.dat");
+        dump( $ipLo->getlocation("223.87.204.17"));
     }
 }
 

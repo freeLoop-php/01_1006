@@ -12,5 +12,19 @@ return array(
     /*开启跟踪信息*/
     'SHOW_PAGE_TRACE'       =>  true,
     'LOAD_EXT_FILE'         =>  'info',
+    /*RBAC权限自定义信息*/
+    /*1.角色数组*/
+    'RBAC_ROLES'            => array(
+                                1 => "高层管理",
+                                2 => "中层领导",
+                                3 => "普通职员",
+                            ),
+    /*1.权限数组(关联角色数组,一一对应关系)*/
+    'RBAC_ROLE_AUTHS'            => array(
+                                1 => "*/*",//拥有全部的权限
+                                2 => array("email/*","doc/*","knowledge/*","index/*"),
+                                3 => array("email/*","knowledge/*","index/*"),
+                            ),
+
 );
 

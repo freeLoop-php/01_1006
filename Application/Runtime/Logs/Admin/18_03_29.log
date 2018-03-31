@@ -1,0 +1,30 @@
+[ 2018-03-29T08:49:33+08:00 ] 127.0.0.1 /index.php/Admin/Dept/shanchu
+ERR: 非法操作:shanchu
+
+[ 2018-03-29T16:16:23+08:00 ] 127.0.0.1 /index.php/Admin/Doc/add.html
+ERR: Think\Model:saveData方法不存在！
+
+[ 2018-03-29T16:17:33+08:00 ] 127.0.0.1 /index.php/Admin/Doc/add.html
+ERR: Think\Model:saveData方法不存在！
+
+[ 2018-03-29T16:18:08+08:00 ] 127.0.0.1 /index.php/Admin/Doc/add.html
+ERR: Think\Model:saveData方法不存在！
+
+[ 2018-03-29T16:18:13+08:00 ] 127.0.0.1 /index.php/Admin/Doc/add.html
+ERR: Think\Model:saveData方法不存在！
+
+[ 2018-03-29T17:55:57+08:00 ] 127.0.0.1 /index.php/Admin/Doc/download/id/7
+ERR: 非法操作:download
+
+[ 2018-03-29T18:03:03+08:00 ] 127.0.0.1 /index.php/Admin/Doc/download/id/7
+ERR: 非法操作:download
+
+[ 2018-03-29T22:38:45+08:00 ] 127.0.0.1 /index.php/Admin/Doc/mobile/
+ERR: 非法操作:mobile
+
+[ 2018-03-29T22:39:24+08:00 ] 127.0.0.1 /index.php/Admin/Doc/mobile/
+ERR: 非法操作:mobile
+
+[ 2018-03-29T22:54:00+08:00 ] 127.0.0.1 /index.php/Admin/Doc/mobile/
+ERR: 非法操作:mobile
+

@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="/Public/Admin/css/base.css" />
-<link rel="stylesheet" href="/Public/Admin/css/info-reg.css" />
+<link rel="stylesheet" href="/01_1006/Public/Admin/css/base.css" />
+<link rel="stylesheet" href="/01_1006/Public/Admin/css/info-reg.css" />
 <title>移动办公自动化系统</title>
 <style type='text/css'>
 	select {
-		background: rgba(0, 0, 0, 0) url("/Public/Admin/images/inputbg.png") repeat-x scroll 0 0;
+		background: rgba(0, 0, 0, 0) url("/01_1006/Public/Admin/images/inputbg.png") repeat-x scroll 0 0;
 	    border: 1px solid #c5d6e0;
 	    height: 28px;
 	    outline: medium none;
@@ -37,9 +37,7 @@
         <input name="author" type="text" placeholder="作者..." />
     </p>
     <p class="short-input ue-clear">
-    	<label>内容：
-        <script id="editor" type="text/plain" style="width: 600px;height: 300px;"></script>
-        </label>
+    	<label>内容：<script id="editor" name="content" type="text/plain" style="width: 600px;height: 300px;"></script></label>
     </p>
 </div>
 <div class="btn ue-clear">
@@ -48,12 +46,12 @@
 </div>
 </form>
 </body>
-<script type="text/javascript" src="/Public/Admin/js/jquery.js"></script>
-<script type="text/javascript" src="/Public/Admin/js/common.js"></script>
-<script type="text/javascript" src="/Public/Admin/js/WdatePicker.js"></script>
-<script type="text/javascript" src="/Public/Admin/plugin/ue/ueditor.config.js"></script>
-<script type="text/javascript" src="/Public/Admin/plugin/ue/ueditor.all.min.js"></script>
-<script type="text/javascript" src="/Public/Admin/plugin/ue/lang/zh-ch/zh-ch.jquery.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/jquery.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/common.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/WdatePicker.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/plugin/ue/ueditor.config.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/plugin/ue/ueditor.all.min.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/plugin/ue/lang/zh-ch/zh-ch.jquery.js"></script>
 <script type="text/javascript">
     var ue=UE.getEditor('editor');
 $(function(){

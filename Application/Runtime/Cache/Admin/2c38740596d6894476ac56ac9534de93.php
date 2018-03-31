@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="/Public/Admin/css/base.css" />
-<link rel="stylesheet" href="/Public/Admin/css/info-mgt.css" />
-<link rel="stylesheet" href="/Public/Admin/css/WdatePicker.css" />
+<link rel="stylesheet" href="/01_1006/Public/Admin/css/base.css" />
+<link rel="stylesheet" href="/01_1006/Public/Admin/css/info-mgt.css" />
+<link rel="stylesheet" href="/01_1006/Public/Admin/css/WdatePicker.css" />
+<link rel="stylesheet" href="/01_1006/Public/Admin/css/WdatePicker.css" />
 <title>移动办公自动化系统</title>
 <style type='text/css'>
 	table tr .id{ width:63px; text-align: center;}
@@ -23,7 +24,7 @@
 <body>
 <div class="title"><h2>公文管理</h2></div>
 <div class="table-operate ue-clear">
-	<a href="/index.php/Admin/Doc/add" class="add">添加</a>
+	<a href="/01_1006/index.php/Admin/Doc/add" class="add">添加</a>
     <a href="javascript:;" class="del">删除</a>
     <a href="javascript:;" class="edit">编辑</a>
     <a href="javascript:;" class="count">统计</a>
@@ -45,11 +46,12 @@
             <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?><tr>
                     <td class="id"><?php echo ($vol["id"]); ?></td>
                     <td class="name"><?php echo (msubstr($vol["title"],0,8)); ?></td>
-                    <td class="file"></td>
+                    <td class="file"><?php echo ($vol["filename"]); if($vol["hasfile"] == 1): ?><a href="/01_1006/index.php/Admin/Doc/download/id/<?php echo ($vol["id"]); ?>">【下载】</a><?php endif; ?></td>
                     <td class="content"><?php echo ($vol["author"]); ?></td>
                     <td class="addtime"><?php echo (date("Y-m-d H:i:s",$vol["addtime"])); ?></td>
                     <td class="operate">
-                        <a href ='javascript:;'>查看</a>
+                        <a href ='javascript:;' class="show" data_id="<?php echo ($vol["id"]); ?>" data_title="<?php echo ($vol["title"]); ?>">查看</a>
+                         | <a href="/01_1006/index.php/Admin/Doc/edit/id/<?php echo ($vol["id"]); ?>">编辑</a>
                     </td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>
@@ -62,10 +64,26 @@
 	<div class="pxofy">共 <?php echo ($count); ?> 条记录</div>
 </div>
 </body>
-<script type="text/javascript" src="/Public/Admin/js/jquery.js"></script>
-<script type="text/javascript" src="/Public/Admin/js/common.js"></script>
-<script type="text/javascript" src="/Public/Admin/js/WdatePicker.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/jquery.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/common.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/WdatePicker.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/plugin/layer/layer.js"></script>
+
 <script type="text/javascript">
+    $(function () {
+        $('.show').on('click',function () {
+            var id=$(this).attr('data_id');
+            layer.open({
+                type: 2,
+                title: $(this).attr('data_title'),
+                shadeClose: true,
+                shade: 0.8,
+                area: ['380px', '90%'],
+                content: "/01_1006/index.php/Admin/Doc/layerContent/id/"+id, //iframe的url
+            });
+        });
+    });
+
 $(".select-title").on("click",function(){
 	$(".select-list").hide();
 	$(this).siblings($(".select-list")).show();

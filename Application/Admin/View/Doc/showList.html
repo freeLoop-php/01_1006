@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="__ADMIN__/css/base.css" />
 <link rel="stylesheet" href="__ADMIN__/css/info-mgt.css" />
 <link rel="stylesheet" href="__ADMIN__/css/WdatePicker.css" />
+<link rel="stylesheet" href="__ADMIN__/css/WdatePicker.css" />
 <title>移动办公自动化系统</title>
 <style type='text/css'>
 	table tr .id{ width:63px; text-align: center;}
@@ -46,11 +47,12 @@
                 <tr>
                     <td class="id">{$vol.id}</td>
                     <td class="name">{$vol.title|msubstr=###,0,8}</td>
-                    <td class="file"></td>
+                    <td class="file">{$vol.filename}<if condition="$vol.hasfile == 1"><a href="__CONTROLLER__/download/id/{$vol.id}">【下载】</a></if></td>
                     <td class="content">{$vol.author}</td>
                     <td class="addtime">{$vol.addtime|date="Y-m-d H:i:s",###}</td>
                     <td class="operate">
-                        <a href ='javascript:;'>查看</a>
+                        <a href ='javascript:;' class="show" data_id="{$vol.id}" data_title="{$vol.title}">查看</a>
+                         | <a href="__CONTROLLER__/edit/id/{$vol.id}">编辑</a>
                     </td>
                 </tr>
             </volist>
@@ -67,7 +69,23 @@
 <script type="text/javascript" src="__ADMIN__/js/jquery.js"></script>
 <script type="text/javascript" src="__ADMIN__/js/common.js"></script>
 <script type="text/javascript" src="__ADMIN__/js/WdatePicker.js"></script>
+<script type="text/javascript" src="__ADMIN__/plugin/layer/layer.js"></script>
+
 <script type="text/javascript">
+    $(function () {
+        $('.show').on('click',function () {
+            var id=$(this).attr('data_id');
+            layer.open({
+                type: 2,
+                title: $(this).attr('data_title'),
+                shadeClose: true,
+                shade: 0.8,
+                area: ['380px', '90%'],
+                content: "__CONTROLLER__/layerContent/id/"+id, //iframe的url
+            });
+        });
+    });
+
 $(".select-title").on("click",function(){
 	$(".select-list").hide();
 	$(this).siblings($(".select-list")).show();

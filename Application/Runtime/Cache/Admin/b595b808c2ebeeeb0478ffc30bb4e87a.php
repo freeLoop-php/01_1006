@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="/Public/Admin/css/base.css" />
-<link rel="stylesheet" type="text/css" href="/Public/Admin/css/jquery.dialog.css" />
-<link rel="stylesheet" href="/Public/Admin/css/index.css" />
+<link rel="stylesheet" href="/01_1006/Public/Admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/01_1006/Public/Admin/css/jquery.dialog.css" />
+<link rel="stylesheet" href="/01_1006/Public/Admin/css/index.css" />
 <title>移动办公自动化系统</title>
 </head>
 
@@ -16,7 +16,10 @@
       <h1 class="logo"></h1>
       <div class="login-info ue-clear">
         <div class="welcome ue-clear"><span>欢迎您,</span><a href="javascript:;" class="user-name"><?php echo (session('username')); ?></a></div>
-        <div class="login-msg ue-clear"> <a href="javascript:;" class="msg-txt">消息</a> <a href="javascript:;" class="msg-num">10</a> </div>
+        <div class="login-msg ue-clear">
+          <a href="<?php echo U('Email/showMessage');?>" target="ifra" class="msg-txt">消息</a>
+          <a href="<?php echo U('Email/showMessage');?>" target="ifra" class="msg-num">0</a>
+        </div>
       </div>
       <div class="toolbar ue-clear"> <a href="javascript:;" class="home-btn">首页</a> <a href="javascript:;" class="quit-btn exit"></a> </div>
     </div>
@@ -47,9 +50,13 @@
           </li>
           <li class="konwledge">
             <div class="nav-header"><a href="javascript:;" class="ue-clear"><span>知识管理</span><i class="icon"></i></a></div>
+            <ul class="subnav">
+              <li><a href="javascript:;" date-src="<?php echo U('Knowledge/showList');?>">知识列表</a></li>
+              <li><a href="javascript:;" date-src="<?php echo U('Knowledge/add');?>">添加知识</a></li>
+            </ul>
           </li>
           <li class="agency">
-            <div class="nav-header"><a href="javascript:;" class="ue-clear"><span>组织结构</span><i class="icon"></i></a></div>
+            <div class="nav-header"><a href="javascript:;" class="ue-clear"><span>部门管理</span><i class="icon"></i></a></div>
             <ul class="subnav">
               <li><a href="javascript:;" date-src="<?php echo U('Dept/showList');?>">部门列表</a></li>
               <li><a href="javascript:;" date-src="<?php echo U('Dept/add');?>">添加部门</a></li>
@@ -57,6 +64,11 @@
           </li>
           <li class="email">
             <div class="nav-header"><a href="javascript:;" class="ue-clear"><span>邮件管理</span><i class="icon"></i></a></div>
+            <ul class="subnav">
+              <li><a href="javascript:;" date-src="<?php echo U('Email/send');?>">发邮件</a></li>
+              <li><a href="javascript:;" date-src="<?php echo U('Email/showSend');?>">收件箱</a></li>
+              <li><a href="javascript:;" date-src="<?php echo U('Email/showMessage');?>">发件箱</a></li>
+            </ul>
           </li>
           <li class="system">
             <div class="nav-header"><a href="javascript:;" class="ue-clear"><span>系统管理</span><i class="icon"></i></a></div>
@@ -64,7 +76,7 @@
         </ul>
       </div>
       <div class="content">
-        <iframe src="<?php echo U('home');?>" id="iframe" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe src="<?php echo U('home');?>" name="ifra" id="iframe" width="100%" height="100%" frameborder="0"></iframe>
       </div>
     </div>
   </div>
@@ -87,9 +99,22 @@
   </div>
 </div>
 </body>
-<script type="text/javascript" src="/Public/Admin/js/jquery.js"></script>
-<script type="text/javascript" src="/Public/Admin/js/common.js"></script>
-<script type="text/javascript" src="/Public/Admin/js/core.js"></script>
-<script type="text/javascript" src="/Public/Admin/js/jquery.dialog.js"></script>
-<script type="text/javascript" src="/Public/Admin/js/index.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/jquery.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/common.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/core.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/jquery.dialog.js"></script>
+<script type="text/javascript" src="/01_1006/Public/Admin/js/index.js"></script>
+<script type="text/javascript">
+    function getMsgCount() {
+        $.get("<?php echo U('Email/getCount');?>",function (resp) {
+            if (resp>0){
+              $(".msg-num").html(resp);
+            }
+        });
+    }
+
+    $(function () {
+      setInterval('getMsgCount()',3000);
+  });
+</script>
 </html>
